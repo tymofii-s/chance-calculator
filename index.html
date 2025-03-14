@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розрахунок оцінок</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        /* button { margin: 10px; } */
+        .container > div { margin: 30px auto; }
+        .add-button-container { width: 200px; margin: auto; }
+        .container { width: 600px; margin: auto; text-align: center; }
+        .input-group { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Розрахунок оцінок</h2>
+    
+    <div class="add-button-container">
+        <button onclick="addTest()">Додати тест</button>
+        <p>КІлькість завдань: <span id="countOfTasks">0</span></p>
+    </div>
+    
+    <div id="testContainer">
+        <!-- Динамічно додаються поля для тестів -->
+    </div>
+
+    <button onclick="getData()">Розрахувати</button>
+    <p>Прав. відп. - правильних відповідей</p>
+
+    <div>
+        <canvas id="resultChart"></canvas>
+    </div>    
+    <p id="percents"></p>
+</div>
+
+<script src="./scripts/getData.js"></script>
+<script src="./scripts/calculate.js"></script>
+<script src="./scripts/drawChart.js"></script>
+
+</body>
+</html>
